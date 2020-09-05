@@ -15,7 +15,22 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Flutter App"),
       ),
-      body: Center(child: Container(child: Text("Hi flutter"))),
+      body: Center(
+          child: Container(
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.teal,
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.grey, blurRadius: 5, offset: Offset(2.0, 5.0))
+            ],
+            gradient:
+                LinearGradient(colors: [Colors.lightBlue, Colors.deepOrange])),
+        child: Text("Hi flutter"),
+        width: 100,
+        height: 100,
+      )),
     );
   }
 }
